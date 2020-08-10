@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2020 Bowser65
- * Licensed under the Open Software License version 3.0
- */
 
 const { Plugin } = require('powercord/entities');
 const fs = require('fs'),
