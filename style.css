@@ -1,0 +1,60 @@
+
+
+.theme-dark {
+    --background-primary: #0000004d;
+    --background-secondary: #00000056;
+    --background-secondary-alt: #000000a4;
+    --background-tertiary: #00000056;
+}
+
+
+
+.bg-h5JY_x{
+    background-repeat:no-repeat;
+    background-position: center;
+    filter: url("#sharpBlur");
+    background-size: cover;
+    opacity:0;
+}
+.bg2 {
+    background-repeat:no-repeat;
+    background-position: center;
+    filter: url("#sharpBlur");
+    background-size: cover;
+    width:100%;
+    height:calc(100% + 22px);
+    display: block;
+    position:absolute;
+    top:-22px;
+}
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.theme-dark .container-1D34oG{
+    background-color: var(--background-primary) !important ;
+}
+
+
+.tutorialContainer-1v44GL > .listItem-2P_4kh > .listItemWrapper-3X98Pc > .wrapper-25eVIn > .svg-1X37T1 > foreignObject > .selected-bZ3Lue > .childWrapper-anI2G9::before {
+    border-radius: 25%;
+}
+.tutorialContainer-1v44GL > .listItem-2P_4kh > .listItemWrapper-3X98Pc > .wrapper-25eVIn > .svg-1X37T1 > foreignObject > .selected-bZ3Lue > .childWrapper-anI2G9 {
+    border-radius: 25%;
+    background-color: var(--background-primary);
+}
+
+.typeWindows-1za-n7 {
+    background-color: var(--background-primary);
+}
+
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB>.scroller-2FKFPG::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-track-piece {
+    background-color: var(--background-secondary);
+    border:0px;
+    display:none;
+}
+
