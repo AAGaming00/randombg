@@ -15,6 +15,7 @@
     filter: url("#sharpBlur");
     background-size: cover;
     opacity:0;
+    will-change: opacity;
 }
 .bg2 {
     background-repeat:no-repeat;
@@ -26,6 +27,7 @@
     display: block;
     position:absolute;
     top:-22px;
+    will-change: opacity;
 }
 @keyframes fadein {
     0% {
