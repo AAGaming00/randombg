@@ -89,7 +89,7 @@ module.exports = class RandomBG extends Plugin {
   }
 
   async startPlugin () {
-    const b64data = this.start();
+    const b64data = await this.start();
     this.reload(b64data);
     timeout = setInterval(this.reload, 60000, b64data);
   }
