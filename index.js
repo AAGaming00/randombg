@@ -21,9 +21,13 @@ document.body.insertAdjacentHTML('beforebegin', `
 </filter>
 </svg>`);
 module.exports = class RandomBG extends Plugin {
+  timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   reload (b64data) {
-    if (!b64data || b64data.length === 0){
-      return false
+    if (!b64data || b64data.length === 0) {
+      return false;
     }
     let random = Math.floor(Math.random() * b64data.length);
     while (random === last) {
@@ -46,7 +50,7 @@ module.exports = class RandomBG extends Plugin {
 }`;
     css.innerHTML = styles;
     last = random;
-    return true
+    return true;
   }
 
   getFiles (files) {
@@ -72,11 +76,20 @@ module.exports = class RandomBG extends Plugin {
     return (b64data);
   }
 
-  async startPlugin () {
-    this.loadStylesheet(path.join(__dirname, 'style.css'))
+  async start () {
+    await timeout(5000)
+    this.loadStylesheet(path.join(__dirname, 'style.css'));
     const files = await fs.readdirSync(path.join(__dirname, 'images'));
     console.log('starting read dir');
+    if (!files) {
+      return false;
+    }
     const b64data = await this.getFiles(files);
+    return b64data;
+  }
+
+  async startPlugin () {
+    const b64data = this.start();
     this.reload(b64data);
     timeout = setInterval(this.reload, 60000, b64data);
   }
