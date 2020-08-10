@@ -41,7 +41,6 @@ module.exports = class RandomBG extends Plugin {
   .bg2{
     background-image: url(${b64data[last]});
 }`;
-
     css.innerHTML = styles;
     last = random;
   }
