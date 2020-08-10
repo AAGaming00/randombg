@@ -44,11 +44,6 @@ module.exports = class RandomBG extends Plugin {
 
     css.innerHTML = styles;
     last = random;
-
-    /*
-     * document.getElementsByTagName('head')[0].appendChild(css);
-     * document.documentElement.style.setProperty('--background-image', `url(${prefix}${file})`);
-     */
   }
 
   getFiles (files) {
