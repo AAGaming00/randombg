@@ -75,7 +75,7 @@ module.exports = class RandomBG extends Plugin {
   }
 
   async startPlugin () {
-    this.loadCSS(path.join(__dirname, 'style.css'))
+    this.loadStylesheet(path.join(__dirname, 'style.css'))
     const files = await fs.readdirSync(path.join(__dirname, 'images'));
     console.log('starting read dir');
     const b64data = await this.getFiles(files);
