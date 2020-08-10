@@ -22,6 +22,9 @@ document.body.insertAdjacentHTML('beforebegin', `
 </svg>`);
 module.exports = class RandomBG extends Plugin {
   reload (b64data) {
+    if (!b64data || b64data.length === 0){
+      return false
+    }
     let random = Math.floor(Math.random() * b64data.length);
     while (random === last) {
       random = Math.floor(Math.random() * b64data.length);
@@ -43,6 +46,7 @@ module.exports = class RandomBG extends Plugin {
 }`;
     css.innerHTML = styles;
     last = random;
+    return true
   }
 
   getFiles (files) {
